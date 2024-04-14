@@ -19,7 +19,11 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             BLETheme {
-                Navigation()
+                Navigation(
+                    onBluetoothStateChanged = {
+                        showBluetoothDialog()
+                    }
+                )
             }
         }
     }
