@@ -53,6 +53,8 @@ android {
 }
 
 dependencies {
+    val lifecycle_version = "2.7.0"
+
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
@@ -83,6 +85,13 @@ dependencies {
 
     //Permissions
     implementation ("com.google.accompanist:accompanist-permissions:0.34.0")
+
+    //viewmodel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
+    implementation("androidx.activity:activity-ktx:1.8.2")
+    kapt("androidx.lifecycle:lifecycle-compiler:2.48.1")
+
 }
 
 fun kapt(s: String) {
